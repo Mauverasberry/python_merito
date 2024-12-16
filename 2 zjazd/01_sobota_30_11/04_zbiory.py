@@ -32,6 +32,10 @@ if len(duplikaty) != 0:
 if len(duplikaty) == 0:
     print('ok, brak duplikatow')
 # kazdy chory z Krzykow i z Centrum powinien być w NFZ
+ poza_nfz = (chorzy_rok | chorzy_miesiac | krzyki | centrum) - NFZ
+ print(f'Ludzie poza NFZ {poza_nfz}')
+ NFZ = NFZ | poza_nfz
+
 
 # pesele żeńskie mają ostatnią cyfrę parzystą , męskie nieprzystą
 # stworz osobną liste dla k i m
