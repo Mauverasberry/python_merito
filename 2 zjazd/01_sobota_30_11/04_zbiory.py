@@ -1,3 +1,5 @@
+from doctest import set_unittest_reportflags
+
 NFZ = {1234, 3476, 4544, 3423, 3254, 8769, 5436, 2345, 6532, 1243, 6435, 1298, 6732, 7688, 7648, 2345, 2356}
 chorzy_rok = set([1234, 3476, 4544, 3423, 3254, 8769, 5436])
 chorzy_miesiac = set([1234, 3476, 3098, 4544, 3423])
@@ -32,11 +34,19 @@ if len(duplikaty) != 0:
 if len(duplikaty) == 0:
     print('ok, brak duplikatow')
 # kazdy chory z Krzykow i z Centrum powinien być w NFZ
- poza_nfz = (chorzy_rok | chorzy_miesiac | krzyki | centrum) - NFZ
- print(f'Ludzie poza NFZ {poza_nfz}')
- NFZ = NFZ | poza_nfz
-
+poza_nfz = (chorzy_rok | chorzy_miesiac | krzyki | centrum) - NFZ
+print(f'Ludzie poza NFZ {poza_nfz}')
+NFZ = NFZ | poza_nfz
 
 # pesele żeńskie mają ostatnią cyfrę parzystą , męskie nieprzystą
-# stworz osobną liste dla k i m
+# nowe zbiory, osobne dla K i M (w NFZ)
+men = set()
+woman = set()
+for pesel in NFZ:
+    if pesel % 2 == 0:
+        women.add(pesel)
+    else:
+        men.add(pesel)
+
+
 
