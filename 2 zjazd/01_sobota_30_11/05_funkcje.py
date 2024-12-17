@@ -17,3 +17,5 @@ przywitanie() # wywołanie funkcji
 przywitanie2('Ola')
 przywitanie3('Aleksandra', 36)
 
+
+
