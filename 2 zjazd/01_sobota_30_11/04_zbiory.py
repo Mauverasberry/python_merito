@@ -38,15 +38,17 @@ poza_nfz = (chorzy_rok | chorzy_miesiac | krzyki | centrum) - NFZ
 print(f'Ludzie poza NFZ {poza_nfz}')
 NFZ = NFZ | poza_nfz
 
-# pesele żeńskie mają ostatnią cyfrę parzystą , męskie nieprzystą
+# pesele żeńskie mają ostatnią cyfrę parzystą, męskie nieprzystą
 # nowe zbiory, osobne dla K i M (w NFZ)
 men = set()
 woman = set()
 for pesel in NFZ:
     if pesel % 2 == 0:
-        women.add(pesel)
+        woman.add(pesel)
     else:
         men.add(pesel)
 
-
+# zadanie rekrutacyjne - usuwanie duplikatów
+lista = [1, 2, 4, 6, 5, 6, 4, 2, 3, 3, 4, 2, 6]
+print(list(set(lista)))
 
