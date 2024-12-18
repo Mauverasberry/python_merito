@@ -21,3 +21,4 @@ def ubezpieczenie_zwierzecia(typ, wiek):
         return (200 * 1.2) + (wiek - 7) * 8
 
 print(f'zapłacisz {ubezpieczenie_zwierzecia('pies', 12)}')
+
