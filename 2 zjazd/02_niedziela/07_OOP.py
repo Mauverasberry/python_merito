@@ -7,7 +7,7 @@ class Auto:
         self.spalanie_na_100 = 14
         self.rocznik = 2024 - wiek
 
-    def __str__(self):
+    def __str__(self):  #metodfa magiczna
         return f'Pojazd w stanie {self.stan} z rocznika {self.rocznik}'
 
     def zasieg(self):
