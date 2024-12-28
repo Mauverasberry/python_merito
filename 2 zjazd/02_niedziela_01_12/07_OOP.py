@@ -29,3 +29,4 @@ auto01 = Auto('black', 4, 12)
 print(f'spalanie wynosi {auto01.spalanie_na_100}')
 print(auto01)
 print(auto01.zasieg())
+
