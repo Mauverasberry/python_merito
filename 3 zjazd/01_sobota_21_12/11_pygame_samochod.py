@@ -12,7 +12,7 @@ class Samochod:
         self.kierunek = random.choice(['x', 'y'])
 
     def losuj_predkosc(self):
-        self.predkosc = random.randint(1, 3)
+        self.predkosc = random.randint(1, 1)
 
     def losuj_kierunek(self):
         self.kierunek = random.choice(['x', 'y'])
@@ -54,7 +54,7 @@ class Swiat:
             print()
 
     def display(self):
-        self.screen.fill((0,0,0)) #wyczysc plansze
+        #self.screen.fill((0,0,0)) #wyczysc plansze
         x = self.samochod.x *20
         y = self.samochod.y *20
         pygame.draw.rect(self.screen, (255,255,255), (x, y, 20, 20))
