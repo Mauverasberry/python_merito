@@ -6,19 +6,19 @@ import os
 app = Flask(__name__)
 CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'tictactoe.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'tictactoe.db')  #bazy danych w sqlite
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-class Game(db.Model):
+class Game(db.Model):   #model, kt korzysta z danych z bazy danych
     id = db.Column(db.Integer, primary_key=True)
     moves = db.Column(db.String, default="")
 
 with app.app_context():
     db.create_all()
 
-@app.route('/game', methods=['POST'])
+@app.route('/game', methods=['POST'])   #endpointy
 def create_game():
     new_game = Game()
     db.session.add(new_game)
