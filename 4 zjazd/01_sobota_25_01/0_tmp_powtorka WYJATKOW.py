@@ -21,7 +21,9 @@ import datetime
 teraz = datetime.datetime.now()
 print(teraz)
 print(type(teraz))
-teraz.strftime()
+# Formatowanie daty na czytelny sposób
+sformatowana_data = teraz.strftime("%Y-%m-%d %H:%M:%S")
+print(sformatowana_data)
 
 
 

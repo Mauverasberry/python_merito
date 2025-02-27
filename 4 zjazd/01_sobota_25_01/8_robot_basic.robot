@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-test setup     open browser    https://pl.wikipedia.org    chrome
-test teardown    close browser
+Test Setup     open browser    https://pl.wikipedia.org    chrome
+Test Teardown    close browser
 
 *** Variables ***
 ${wikiedia login}    RobotTests
@@ -10,7 +10,7 @@ ${error message}    Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze
 *** Keywords ***
 Log in wikipedia
     click element    pt-login-2
-    Sleep    1
+    Sleep    1robot .\7_robot_basic.robot
     input text   wpName1    ${wikiedia login}
     input text    wpPassword1    aaa
     sleep    1
